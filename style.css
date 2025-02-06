@@ -1,319 +1,275 @@
-/* Temel Sıfırlamalar */
+/* 🎨 Temel Sıfırlamalar */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Genel Sayfa Ayarları */
-  body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f8f8f8; /* Açık arka plan */
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* İçerik Konteyneri */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header ve Navigasyon */
-  header {
-    background: #fff;
-    padding: 20px 0;
-    border-bottom: 1px solid #eaeaea;
-  }
-  header h1 {
-    float: left;
-    font-size: 24px;
-    margin: 0;
-  }
-  nav ul {
-    list-style: none;
-    float: right;
-  }
-  nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-  }
-  nav ul li a:hover {
-    color: #007BFF; /* Hover rengi */
-  }
-  
-  /* Hero Bölgesi */
-  .hero {
-    background: #fff;
-    padding: 100px 0;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  /* Diğer Bölümler */
-  section {
-    padding: 60px 0;
-  }
-  
-  /* Footer */
-  footer {
-    background: #fff;
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #eaeaea;
-  }
-  
-  /* Hamburger Menü Stilleri */
-.menu-toggle {
-    background: none;
-    border: none;
-    display: none; /* Masaüstünde gizli, mobilde gösterilecek */
-    cursor: pointer;
-  }
-  .hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    display: block;
-    position: relative;
-  }
-  .hamburger::before,
-  .hamburger::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-  }
-  .hamburger::before {
-    top: -8px;
-  }
-  .hamburger::after {
-    top: 8px;
-  }
-  
-  /* Masaüstü Navigasyon */
-  nav ul.nav-list {
-    list-style: none;
-    float: right;
-  }
-  
-  /* Mobil Görünüm */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-    nav ul.nav-list {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      margin-top: 15px;
-    }
-    nav ul.nav-list.active {
-      display: flex;
-    }
-    nav ul.nav-list li {
-      margin: 10px 0;
-    }
-    nav ul.nav-list li a {
-      display: block;
-    }
-  }
-  
-  /* İletişim Formu Stilleri */
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  #contact form div {
-    display: flex;
-    flex-direction: column;
-  }
-  #contact form input,
-  #contact form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-  }
-  #contact form button {
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  #contact form button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Sosyal Medya Bölümü Stilleri */
-#social {
-    background-color: #fff;
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  #social h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 2rem;
-  }
-  
-  .social-icons a {
-    color: #333;
-    transition: color 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: #007BFF; /* İkonlara hover efekti için renk */
-  }
-  
-  /* Navigasyon Liste Öğeleri Genel Ayarları */
-.nav-list {
-    list-style: none;
-    float: right;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Normal metin içeren linkler için ayarlar */
-  .nav-list li a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 10px;
-    transition: color 0.3s;
-  }
-  
-  /* Hover efekti */
-  .nav-list li a:hover {
-    color: #007BFF;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Sosyal Medya İkonlarının Bulunduğu Liste Öğesi */
-.nav-list li.social-icon a {
-    display: inline-block;
-    padding: 5px; /* Fazla boşluk varsa azaltabilirsiniz */
-  }
-  
-  /* İkon boyutunu küçültmek için: */
-  .nav-list li.social-icon i {
-    font-size: 1.2rem;  /* İstediğiniz boyuta göre ayarlayın */
-    vertical-align: middle;
-  }
-  
-  /* Yukarı Çık Butonunun Stil Ayarları */
-#backToTop {
-    display: none; /* Başlangıçta gizli */
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    outline: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
-  }
-  
-  #backToTop:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Tarifler Bölümü Genel Stil */
-#tarifler {
-    padding: 60px 0;
-    background-color: #f8f8f8;
-  }
-  
-  /* Tarif Kartı Stilleri */
-  .tarifler-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .tarif-card {
-    background: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s;
-  }
-  
-  .tarif-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .tarif-card h3 {
-    margin: 15px 0 10px;
-    font-size: 1.5rem;
-  }
-  
-  .tarif-card p {
-    padding: 0 15px 15px;
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .tarif-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  /* Genel Sayfa Yapısı */
+/* 📌 Genel Sayfa Yapısı */
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Sayfanın en az ekran yüksekliği kadar olmasını sağlar */
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 📌 Konteyner */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 📌 Header ve Yapışkan Navigasyon */
+header {
+  background: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+header h1 {
+  float: left;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000; /* ✅ Siyah */
+}
+
+/* 📌 Menü Tasarımı */
+nav ul.nav-list {
+  list-style: none;
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+nav ul.nav-list li {
+  margin-left: 20px;
+}
+
+nav ul.nav-list li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+  padding: 10px 15px;
+  border-radius: 0; /* ✅ Mavi kareyi kaldırdık */
+  background: none;
+}
+
+nav ul.nav-list li a:hover {
+  color: #007BFF;
+  transform: scale(1.05);
+  background: none;
+}
+
+/* 📌 Hamburger Menü */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* 📌 Mobil Navigasyon */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul.nav-list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  nav ul.nav-list.active {
+    display: flex;
+  }
+  nav ul.nav-list li {
+    margin: 10px 0;
+  }
+}
+
+/* 🎨 Hero Bölgesi */
+.hero {
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* ✅ Daha koyu arka plan */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ Hoşgeldiniz başlığı ve alt metni tamamen beyaz */
+.hero h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff; 
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* 📌 Bölümler */
+section {
+  padding: 80px 0;
+}
+
+/* 🎨 Tarifler Bölümü */
+#tarifler {
+  background-color: #fff;
+}
+
+.tarifler-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.tarif-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.tarif-card:hover {
+  transform: translateY(-5px);
+}
+
+.tarif-card img {
+  width: 100%;
+  height: auto;
+}
+
+.tarif-card h3 {
+  padding: 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.tarif-card p {
+  padding: 10px 20px;
+  color: #666;
+}
+
+/* 📌 İletişim Formu */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#contact form button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+  background-color: #0056b3;
+}
+
+/* 📌 Yukarı Çık Butonu */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: #0056b3;
+}
+
+/* 📌 Footer */
+footer {
+  background: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+footer p {
   margin: 0;
 }
 
-/* Sayfa içeriğini kaplayan alan */
-#about {
-  flex-grow: 1; /* Footer'ın aşağı itilmesini sağlar */
-  padding: 50px 20px;
-  text-align: center;
+/* 🎭 Hover ve Transition Efektleri */
+a, button {
+  transition: all 0.3s ease;
 }
 
-/* Footer'ı en alta sabitleme */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  position: relative;
-  width: 100%;
+button:hover, a:hover {
+  transform: scale(1.05);
+}
+
+/* 🎬 Fade-in Animasyonu */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
