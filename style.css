@@ -273,3 +273,85 @@ button:hover, a:hover {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* 📌 Header ve Navigasyon - Mobil Düzenleme */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 22px; /* Daha küçük ekranlar için font küçültüldü */
+    text-align: center;
+    float: none;
+  }
+
+  nav ul.nav-list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  nav ul.nav-list.active {
+    display: flex;
+  }
+
+  nav ul.nav-list li {
+    margin: 10px 0;
+  }
+
+  /* Menü butonu (hamburger) */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}
+
+/* 📌 Hero Bölümü - Mobil Düzenleme */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh; /* Mobilde daha iyi görünmesi için yüksekliği düşürüldü */
+    padding: 50px 0;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem; /* Mobilde başlık daha iyi hizalanır */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Alt yazıyı küçülttük */
+  }
+}
+
+/* 📌 Tarifler Bölümü - Mobil Düzenleme */
+@media (max-width: 768px) {
+  .tarifler-list {
+    grid-template-columns: repeat(1, 1fr); /* Mobilde 1 sütun olacak */
+    gap: 15px;
+  }
+
+  .tarif-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* 📌 Footer - Mobil Düzenleme */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8rem;
+  }
+}
